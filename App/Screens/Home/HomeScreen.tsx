@@ -1,11 +1,50 @@
-import { Text, View } from 'react-native';
+import { TouchableOpacity, Text, SafeAreaView } from 'react-native';
 import React from 'react';
-import styles from './HomeScreenStyles';
+import styles from './Styles';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { MainNavigatorParams } from '../../Navigator';
 
-export default function HomeScreen() {
+type Props = NativeStackScreenProps<MainNavigatorParams>;
+const HomeScreen = ({ navigation }: Props) => {
     return (
-        <View>
-            <Text>HomeScreen</Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('Login')}
+            >
+                <Text style={styles.text}>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('Register')}
+            >
+                <Text style={styles.text}>Register</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('Map')}
+            >
+                <Text style={styles.text}>Map</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('MapDirections')}
+            >
+                <Text style={styles.text}>MapDirections</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('Profile')}
+            >
+                <Text style={styles.text}>Profile</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('NewPublication')}
+            >
+                <Text style={styles.text}>NewPublication</Text>
+            </TouchableOpacity>
+        </SafeAreaView>
     );
-}
+};
+export default HomeScreen;
