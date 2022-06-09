@@ -4,14 +4,24 @@ import { moderateScale } from 'react-native-size-matters';
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         backgroundColor: colors.backgroundColor,
     },
     top: {
         elevation: 5,
         paddingBottom: '5%',
         backgroundColor: colors.primaryOrange,
-        alignItems: 'center',
-        justifyContent: 'center',
+    },
+    iconContainer: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        paddingRight: 15,
+        paddingTop: 5,
+    },
+    icon: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: moderateScale(25),
     },
     profilePictureContainer: {
         elevation: 5,
@@ -19,6 +29,7 @@ const styles = StyleSheet.create({
         padding: 5,
         marginVertical: 5,
         borderRadius: 999,
+        alignSelf: 'center',
     },
     profilePicture: {
         width: moderateScale(100),
@@ -41,6 +52,36 @@ const styles = StyleSheet.create({
     board: {
         borderTopColor: 'orange',
         borderTopWidth: 1,
+    },
+    cardView: {
+        flex: 1,
+        backgroundColor: 'white',
+        padding: 5,
+        margin: 5,
+        borderRadius: 10,
+        elevation: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        minWidth: '30%',
+    },
+    empty: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+    },
+    emptyIcon: {
+        fontSize: moderateScale(30),
+        color: 'black',
+    },
+    titleBlue: {
+        fontSize: moderateScale(16),
+        color: 'blue',
+    },
+    bottom: {
+        justifyContent: 'flex-end',
+        marginVertical: '20%',
+        alignItems: 'center',
     },
 });
 export default styles;

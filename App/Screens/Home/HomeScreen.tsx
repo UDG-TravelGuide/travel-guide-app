@@ -28,12 +28,6 @@ const HomeScreen = ({ navigation }: Props) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.LoginButton}
-                onPress={() => navigation.navigate('MapDirections')}
-            >
-                <Text style={styles.text}>MapDirections</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-                style={styles.LoginButton}
                 onPress={() => navigation.navigate('Profile')}
             >
                 <Text style={styles.text}>Profile</Text>
@@ -43,6 +37,12 @@ const HomeScreen = ({ navigation }: Props) => {
                 onPress={() => navigation.navigate('NewPublication')}
             >
                 <Text style={styles.text}>NewPublication</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.LoginButton}
+                onPress={() => navigation.navigate('PublicationsList')}
+            >
+                <Text style={styles.text}>PublicationsList</Text>
             </TouchableOpacity>
         </SafeAreaView>
     );
